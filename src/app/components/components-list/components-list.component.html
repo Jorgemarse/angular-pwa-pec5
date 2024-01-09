@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="title">Husky's</h1>
+    <div style="text-align: end;">
+      <button mat-raised-button [routerLink]="['/components-list']" [queryParams]="{view: 'table'}">
+        <mat-icon>view_module</mat-icon>
+      </button>
+      <button mat-raised-button [routerLink]="['/components-list']" [queryParams]="{view: 'cards'}">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+    <div *ngIf="view === 'table'">
+      <div class="content">
+        <div [@fadeInOut] fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let image of images[0]">
+            <a [routerLink]="['/detail', 'random']">
+              <app-grid [title]="'Husky'" [image]="image" [subtitle]="'Dog'"></app-grid>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="view === 'cards'">
+      <div class="content">
+        <div [@fadeInOut] fxLayout="column" fxLayoutGap="16px grid">
+          <div
+            fxFlex="100%"
+            *ngFor="let image of images[0]"
+          >
+            <a [routerLink]="['/detail', 'random']">
+              <app-card [title]="'Husky'" [image]="image" [subtitle]="'Dog'"></app-card>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

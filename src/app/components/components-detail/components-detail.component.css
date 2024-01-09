@@ -1,0 +1,40 @@
+.container-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 1rem;
+    color: #e1630d;
+  }
+  
+  .example-header-image {
+    background-image: url("https://images.dog.ceo/breeds/dachshund/dachshund-7.jpg");
+    background-size: cover;
+  }
+  
+  .mat-card {
+    margin: 2rem 0;
+  }
+  
+  .link-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .link {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
